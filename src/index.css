@@ -1,0 +1,45 @@
+/* Styles pour index.html et index.js */
+
+/* Styles généraux */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: antiquewhite;
+  }
+  
+  .app-bar {
+    background-color: #333;
+  }
+  
+  .flex-grow-1 {
+    flex-grow: 1;
+  }
+  
+  /* Styles pour les containers */
+  .container-margin {
+    margin-top: 2rem;
+  }
+  
+  .container-margin-large {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+  
+  .box-margin {
+    margin-top: 1rem;
+  }
+  
+  .projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .project-box {
+    width: 30%;
+    margin: 1rem;
+  }
+  
+  .form-container {
+    text-align: center;
+  }
+  
