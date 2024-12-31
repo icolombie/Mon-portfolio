@@ -1,27 +1,33 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { AppBar, Toolbar, Typography, Button, Container, Box, Card, CardContent, CardActions, TextField } from '@mui/material';
+import Skills from './components/Skills';
+import backgroundImage from './assets/fonds.avif';
 import './index.css';
 
 function App() {
   return (
     <div>
+    <Container maxWidth="lg" className="container-margin">
       <AppBar position="static" className="app-bar">
         <Toolbar>
           <Typography variant="h6" className="flex-grow-1">
             Mon Portfolio
           </Typography>
-          <Button color="inherit">Accueil</Button>
-          <Button color="inherit">À propos</Button>
-          <Button color="inherit">Projets</Button>
-          <Button color="inherit">Expérience</Button>
-          <Button color="inherit">Contact</Button>
+          <Button color="inherit" href='#accueil'>Accueil</Button>
+          <Button color="inherit" href='#parcours'>Parcours</Button>
+          <Button color="inherit" href='#competences'>Compétences</Button>
+          <Button color="inherit" href='#projets'>Projets</Button>
+          <Button color="inherit" href='#a-propos'>A propos</Button>
+          <Button color="inherit" href='#contact'>Contact</Button>
         </Toolbar>
       </AppBar>
+    </Container>
 
-      <Container maxWidth="lg" className="container-margin">
+    <Container id="accueil" maxWidth="lg" className="background-container"> 
+      <img src={backgroundImage} alt="Background" className="background-image" />
         <Typography variant="h2" align="center" gutterBottom>
-          Bonjour, je suis [Votre Nom]
+          Bonjour, je suis Isabelle COLOMBIE
         </Typography>
         <Typography variant="h5" align="center">
           Développeur Web et Applications
@@ -33,16 +39,20 @@ function App() {
         </Box>
       </Container>
 
-      <Container maxWidth="lg" className="container-margin-large">
+      <Container id="parcours" maxWidth="lg" className="container-margin-large">
         <Typography variant="h4" gutterBottom>
-          À propos
+          Mon parcours
         </Typography>
         <Typography component="p">
-          [Description de votre parcours, compétences et passions]
+          Après une longue carrière dans l'ADV, j'ai décidé de me reconvertir dans un métier-passion, le développement informatique. Pourquoi ce choix ? Dans l'entreprise que j'ai quitté dernièrement, notre informaticien créait des programmes de statistiques en Java, et en voyant ces lignes de codes, je pensais que c'était soit très ennuyeux soit très intéressant. J'ai décidé d'en avoir le coeur net en profitant de cette pause dans ma carrière pour m'initier au code, et j'ai trouvé cela passionnant. Voilà pourquoi je me suis inscrite à une formation de Développeur Web chez Open Classrooms. Je suis consciente d'avoir un profil atypique pour ce job, et d'être assez novice même après cette formation, mais je suis très motivée, j'aime apprendre et j'apprends vite. Ce que je cherche, c'est la pratique avant tout, en contrat court ou long, y compris en alternance afin d'approfondir mes connaissances.
         </Typography>
       </Container>
 
-      <Container maxWidth="lg" className="container-margin-large">
+      <Container id="competences" maxWidth="lg" className="container-margin-large">
+        <Skills />
+      </Container>
+
+      <Container id="projets"  maxWidth="lg" className="container-margin-large">
         <Typography variant="h4" gutterBottom>
           Projets
         </Typography>
@@ -70,16 +80,16 @@ function App() {
         </Box>
       </Container>
 
-      <Container maxWidth="lg" className="container-margin-large">
+      <Container id="a-propos" maxWidth="lg" className="container-margin-large">
         <Typography variant="h4" gutterBottom>
-          Expérience
+          A propos
         </Typography>
         <Typography component="p">
-          [Liste de vos expériences professionnelles, stages et formations]
+          [Personnel]
         </Typography>
       </Container>
 
-      <Container maxWidth="lg" className="container-margin-large">
+      <Container id="contact" maxWidth="lg" className="container-margin-large">
         <Typography variant="h4" gutterBottom>
           Contact
         </Typography>

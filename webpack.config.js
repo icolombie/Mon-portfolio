@@ -2,7 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  mode: 'development', // Ajouter cette ligne pour spécifier le mode
+  mode: 'development',
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -15,9 +15,21 @@ module.exports = {
         exclude: /node_modules/,
         use: 'babel-loader'
       },
-      { 
+      {
         test: /\.css$/, 
-        use: ['style-loader', 'css-loader'] }
+        use: ['style-loader', 'css-loader']
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg|avif|webp)$/, 
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[path][name].[ext]',
+            },
+          },
+        ],
+      }
     ]
   },
   plugins: [
@@ -26,8 +38,10 @@ module.exports = {
     })
   ],
   devServer: {
-    static: path.join(__dirname, 'dist'),
+    static: {
+      directory: path.join(__dirname, 'dist'),
+    },
     compress: true,
-    port: 9000 // Modifier le port si nécessaire
+    port: 9000
   }
 };
