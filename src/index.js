@@ -1,7 +1,8 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import { AppBar, Toolbar, Typography, Button, Container, Box, Card, CardContent, CardActions, TextField } from '@mui/material';
+import { AppBar, Toolbar, Typography, Button, Container, Box, TextField } from '@mui/material';
 import Skills from './components/Skills';
+import Projects from './components/Projects';
 import backgroundImage from './assets/fonds.avif';
 import './index.css';
 
@@ -44,7 +45,7 @@ function App() {
           Mon parcours
         </Typography>
         <Typography component="p">
-          Après une longue carrière dans l'ADV, j'ai décidé de me reconvertir dans un métier-passion, le développement informatique. Pourquoi ce choix ? Dans l'entreprise que j'ai quitté dernièrement, notre informaticien créait des programmes de statistiques en Java, et en voyant ces lignes de codes, je pensais que c'était soit très ennuyeux soit très intéressant. J'ai décidé d'en avoir le coeur net en profitant de cette pause dans ma carrière pour m'initier au code, et j'ai trouvé cela passionnant. Voilà pourquoi je me suis inscrite à une formation de Développeur Web chez Open Classrooms. Je suis consciente d'avoir un profil atypique pour ce job, et d'être assez novice même après cette formation, mais je suis très motivée, j'aime apprendre et j'apprends vite. Ce que je cherche, c'est la pratique avant tout, en contrat court ou long, y compris en alternance afin d'approfondir mes connaissances.
+          Après une longue carrière dans l'ADV, j'ai décidé de me reconvertir dans un métier-passion, le développement informatique. J'ai profité d'un break dans ma carrière pour m'initier au code, et j'ai trouvé cela passionnant. Voilà pourquoi je me suis inscrite à une formation de Développeur Web chez Open Classrooms. Je suis consciente d'être assez novice même après cette formation, mais je suis très motivée, j'aime apprendre et j'apprends vite. Ce que je cherche, c'est la pratique avant tout, en contrat court ou long, y compris en alternance afin d'approfondir mes connaissances.
         </Typography>
       </Container>
 
@@ -52,32 +53,8 @@ function App() {
         <Skills />
       </Container>
 
-      <Container id="projets"  maxWidth="lg" className="container-margin-large">
-        <Typography variant="h4" gutterBottom>
-          Projets
-        </Typography>
-        <Box className="projects-container">
-          <Box className="project-box">
-            <Card>
-              <CardContent>
-                <Typography variant="h5">
-                  Projet 1
-                </Typography>
-                <Typography variant="body2">
-                  Description du projet, technologies utilisées, etc.
-                </Typography>
-              </CardContent>
-              <CardActions>
-                <Button size="small" color="primary" href="#">
-                  Voir le code
-                </Button>
-                <Button size="small" color="primary" href="#">
-                  Voir la démo
-                </Button>
-              </CardActions>
-            </Card>
-          </Box>
-        </Box>
+      <Container id="projets" maxWidth="lg" className=" projects-section container-margin-large"> 
+        <Projects /> 
       </Container>
 
       <Container id="a-propos" maxWidth="lg" className="container-margin-large">

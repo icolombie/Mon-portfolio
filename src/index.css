@@ -49,6 +49,10 @@ body {
     flex-wrap: wrap;
     justify-content: space-around;
   }
+
+  .projects-section {
+    margin-bottom: 6rem; 
+  }
   
   .project-box {
     width: 30%;

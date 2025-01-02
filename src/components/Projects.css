@@ -1,0 +1,41 @@
+.container-margin-large {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+  
+  .projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+  
+  .project-box {
+    width: 100%;
+    max-width: 300px; /* Ajustez la largeur des cartes */
+    max-height: 700px;
+  }
+  
+  .project-image {
+    width: 258px;
+    height: 383px;
+    object-fit: contain; 
+    border-radius: 5px;
+   }
+  
+  
+  .project-technologies {
+    margin-top: 1rem;
+    font-weight: bold;
+  }
+  
+  .project-features {
+    margin-top: 1rem;
+    font-weight: bold;
+  }
+  
+  .project-features ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  

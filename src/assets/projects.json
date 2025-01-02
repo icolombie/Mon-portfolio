@@ -1,0 +1,27 @@
+[
+    {
+      "name": "Site Sophie Bluel",
+      "image": "project1.jpg",
+      "description": "Créer une page web dynamique avec Javascript",
+      "technologies": ["HTML", "CSS", "JavaScript"],
+      "features": ["Récupération dynamique des travaux et des éléments utilisateurs via l'API", "Manipulation des éléments du DOM avec JS", "Gestion des évènements utilisateurs avec JS"],
+      "githubLink": "https://github.com/icolombie/Portfolio-architecte-sophie-bluel.git"
+    },
+    {
+      "name": "Site Kasa",
+      "image": "project2.png",
+      "description": "Créer une application web de location immobilière avec React",
+      "technologies": ["React components", "React Router", "Sass"],
+      "features": ["Configuration de la navigation entre les pages de l'application avec React Router", "Développement des éléments de l'interface du site", "Initialisation de l'application avec CRA"],
+      "githubLink": "https://github.com/icolombie/kasa.git"
+    },
+    {
+      "name": "Site Mon Vieux Grimoire",
+      "image": "project3.png",
+      "description": "Développer le backend d'un site de notation de livres",
+      "technologies": ["NodeJS/Express", "MongoDB", "JWT"],
+      "features": ["Implémenter un modèle logique de données", "Mettre en oeuvre des opérations CRUD de manière sécurisée", "Stocker des données de manière sécurisée"],
+      "githubLink": "https://github.com/icolombie/P7-Dev-Web-livres.git"
+    }
+  ]
+  
