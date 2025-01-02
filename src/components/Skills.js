@@ -2,15 +2,15 @@ import React, { useState } from 'react';
 import { Box, Button, Container, Typography, Modal, Tooltip } from '@mui/material';
 
 import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch'
-import htmlLogo from '../assets/html-logo.png'; 
-import cssLogo from '../assets/css-logo.png';
-import jsLogo from '../assets/javascript-logo.png'; 
-import reactLogo from '../assets/react-logo.png'; 
-import sassLogo from '../assets/sass-logo.png'; 
-import nodejsLogo from '../assets/nodejs-logo.png'; 
-import expressLogo from '../assets/express-logo.png'; 
-import mongodbLogo from '../assets/mongodb-logo.png'; 
-import skillsMap from '../assets/skills-map2.jpg'; 
+import htmlLogo from '../assets/images/html-logo.png'; 
+import cssLogo from '../assets/images/css-logo.png';
+import jsLogo from '../assets/images/javascript-logo.png'; 
+import reactLogo from '../assets/images/react-logo.png'; 
+import sassLogo from '../assets/images/sass-logo.png'; 
+import nodejsLogo from '../assets/images/nodejs-logo.png'; 
+import expressLogo from '../assets/images/express-logo.png'; 
+import mongodbLogo from '../assets/images/mongodb-logo.png'; 
+import skillsMap from '../assets/images/skills-map2.jpg'; 
 import './Skills.css'; 
 
 const skillData = [ 

@@ -1,9 +1,10 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import { AppBar, Toolbar, Typography, Button, Container, Box, TextField } from '@mui/material';
+import { AppBar, Toolbar, Typography, Button, Container, Box } from '@mui/material';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
-import backgroundImage from './assets/fonds.avif';
+import ContactForm from './components/ContactForm';
+import backgroundImage from './assets/images/fonds.avif';
 import './index.css';
 
 function App() {
@@ -31,7 +32,7 @@ function App() {
           Bonjour, je suis Isabelle COLOMBIE
         </Typography>
         <Typography variant="h5" align="center">
-          Développeur Web et Applications
+          Développeuse Web et Applications
         </Typography>
         <Box textAlign="center" className="box-margin">
           <Button variant="contained" color="primary" size="large">
@@ -66,22 +67,8 @@ function App() {
         </Typography>
       </Container>
 
-      <Container id="contact" maxWidth="lg" className="container-margin-large">
-        <Typography variant="h4" gutterBottom>
-          Contact
-        </Typography>
-        <Box component="form" className="form-container">
-          <TextField label="Nom" fullWidth margin="normal" />
-          <TextField label="Email" fullWidth margin="normal" />
-          <TextField label="Message" fullWidth multiline rows={4} margin="normal" />
-          <Box textAlign="center" className="box-margin">
-            <Button variant="contained" color="primary" size="large">
-              Envoyer
-            </Button>
-          </Box>
-        </Box>
-      </Container>
-    </div>
+      <ContactForm /> {/* Utilisez le formulaire de contact ici */} 
+      </div>
   );
 }
 
