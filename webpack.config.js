@@ -15,9 +15,11 @@ module.exports = {
         exclude: /node_modules/,
         use: 'babel-loader'
       },
+      { test: /\.pug$/, 
+        use: ['pug-loader'] }, 
       {
         test: /\.css$/, 
-        use: ['style-loader', 'css-loader']
+        use: ['style-loader', 'css-loader', 'stylus-loader']
       },
       {
         test: /\.(png|jpe?g|gif|svg|avif|webp)$/, 

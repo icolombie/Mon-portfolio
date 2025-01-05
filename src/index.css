@@ -3,14 +3,57 @@
 /* Styles généraux */
 body {
     font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right, #3507dc, #9198e5);
+  }
+  
+  .app-bar.custom-app-bar {
+    background-color: #ffffff; 
+    color: #5b5bc9; 
+    /*box-shadow: none; */
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%;
+    z-index: 1100;
+  }
+
+  .custom-app-bar .MuiButtonBase-root:hover {
+    color:#ffffff;
+    background-color: #5b5bc9;
+  }
+
+  
+  .custom-app-bar .MuiToolbar-root { 
+    color: #5b5bc9; /* Texte bleu */
     
+  } 
+  
+  .custom-app-bar .MuiButtonBase-root { 
+    color: #5b5bc9; /* Couleur des boutons */ 
+  } 
+  
+  .custom-app-bar .MuiTypography-root { 
+    color: #5b5bc9; /* Couleur du texte du titre */ 
   }
   
-  .app-bar {
-    background-color: white;
-    margin-bottom: 2rem;
+  .toolbar {
+    justify-content: space-between;
   }
-  
+
+  .welcome {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-start;
+  }
+
+
+
+  .nav-menu {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+  }
+
   .flex-grow-1 {
     flex-grow: 1;
   }
@@ -19,22 +62,33 @@ body {
   .container-margin {
     margin-top: 2rem;
     margin-bottom: 2rem;
+    padding-top: 64px;
   }
   
   .container-margin-large {
-    margin-top: 4rem;
+    margin-top: 100px;
     margin-bottom: 4rem;
   }
   
   .box-margin {
-    margin-top: 1rem;
+    margin-top: 2rem;
   }
   
   .background-container { 
     position: relative; 
     text-align: center; 
-    height: 50vh; } 
+    color: #ffffff;
+    height: 50vh;
+  
+    display: flex; 
+    flex-direction: column; 
+    /*justify-content: center; /* Aligne le contenu verticalement au centre */ 
+    align-items: center;
+  } 
 
+  .word-spacing {
+    word-spacing: 20px;
+  }
    .background-image { 
     width: 100%;
     height: 50vh;
@@ -42,6 +96,7 @@ body {
     top: 0; 
     left: 0; 
     z-index: -1;
+    border-radius: 20px;
    }
 
   .projects-container {

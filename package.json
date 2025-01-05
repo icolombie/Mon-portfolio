@@ -18,6 +18,7 @@
     "@emotion/styled": "^11.14.0",
     "@mui/material": "^6.3.0",
     "babel-loader": "^9.2.1",
+    "framer-motion": "^11.15.0",
     "html-webpack-plugin": "^5.6.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
@@ -29,7 +30,11 @@
   "devDependencies": {
     "css-loader": "^7.1.2",
     "file-loader": "^6.2.0",
+    "pug": "^2.0.4",
+    "pug-loader": "^2.4.0",
     "style-loader": "^4.0.0",
+    "stylus": "^0.64.0",
+    "stylus-loader": "^8.1.1",
     "url-loader": "^4.1.1"
   }
 }
