@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import ContactForm from './components/ContactForm';
-import backgroundImage from './assets/images/12.jpg';
+import backgroundImage from './assets/images/8093.jpg';
 import './index.css';
 
 
@@ -21,33 +21,27 @@ function App() {
   const wordsWelcome = welcomeText.split(" ");
   const wordsIntro1 = introText1.split(" ");
   const wordsIntro2 = introText2.split(" ");
-  const links = [
-    { text: 'Accueil', href: '#accueil' },
-    { text: 'Compétences', href: '#competences' },
-    { text: 'Projets', href: '#projets' },
-    { text: 'Parcours', href: '#parcours' },
-    { text: 'Contact', href: '#contact' }
-  ];
+  
 
   useEffect(() => {
     const timer0 = setTimeout(() => {
-      setStartAnimation(true); }, 100); // Délai de démarrage pour l'animation de bienvenue
+      setStartAnimation(true); }, 50); // Délai de démarrage pour l'animation de bienvenue
 
     const timer1 = setTimeout(() => {
       setHideWelcome(true);
-    }, wordsWelcome.length * 500 + 300); // Durée de l'animation du texte de bienvenue
+    }, wordsWelcome.length * 400 + 200); // Durée de l'animation du texte de bienvenue
 
     const timer2 = setTimeout(() => {
       setShowIntro1(true);
-    }, wordsWelcome.length * 500 + 700); // Délai pour afficher le texte "Je suis Isabelle COLOMBIE"
+    }, wordsWelcome.length * 400 + 400); // Délai pour afficher le texte "Je suis Isabelle COLOMBIE"
 
     const timer3 = setTimeout(() => {
       setShowIntro2(true);
-    }, wordsWelcome.length * 500 + wordsIntro1.length * 500 + 900); // Délai pour afficher le texte "Développeuse Web et Applications"
+    }, wordsWelcome.length * 400 + wordsIntro1.length * 400 + 600); // Délai pour afficher le texte "Développeuse Web et Applications"
 
     const timer4 = setTimeout(() => {
       setShowButton(true);
-    }, wordsWelcome.length * 500 + wordsIntro1.length * 500 + wordsIntro2.length * 500 + 1100); // Délai pour afficher le bouton
+    }, wordsWelcome.length * 400 + wordsIntro1.length * 400 + wordsIntro2.length * 400 + 800); // Délai pour afficher le bouton
 
     return () => {
       clearTimeout(timer0);
@@ -65,25 +59,47 @@ function App() {
       x: 0,
       rotate: 0, //ajuster pour changer la direction de rotation des mots (négatif pour à gauche, positif pour à droite)
       transition: {
-        delay: i * 0.4, //le délai entre les mots
+        delay: i * 0.3, //le délai entre les mots
         duration: 0.6, //la durée de l'animation
         ease: "linear" //la courbe de transition
       },
     }),
   };
 
+  useEffect(() => { 
+    const buttons = document.querySelectorAll('a[href^="#"]'); 
+    const offset = 60; // Ajustez cette valeur selon la hauteur de votre barre de navigation 
+    buttons.forEach(button => { 
+      button.addEventListener('click', function(event) { 
+        event.preventDefault(); 
+        const targetId = this.getAttribute('href').substring(1); 
+        const targetElement = document.getElementById(targetId); 
+        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - offset; 
+        window.scrollTo({ 
+          top: targetPosition, 
+          behavior: 'smooth' 
+        });
+       });
+       }); 
+       return () => { 
+        buttons.forEach(button => { 
+          button.removeEventListener('click', null); 
+        });
+       };
+       }, []);
+
   return (
     <div>
       <Container maxWidth="lg" className="container-margin">
         <AppBar position="static" className="app-bar custom-app-bar">
-          <Toolbar style={{ justifyContent: 'space-between' }}>
-            <Typography variant="h6">Mon Portfolio</Typography>
-            <div style={{ display: 'flex' }}>
-              {links.map((link, index) => (
-                <Button key={index} color="inherit" href={link.href} style={{ marginRight: '5px' }}>
-                  {link.text}
-                </Button>
-              ))}
+          <Toolbar>
+            <Typography className='welcome' variant="h6">Mon Portfolio</Typography>
+            <div className='nav-menu'>
+            <Button color="inherit" href="#accueil">Accueil</Button> 
+            <Button color="inherit" href="#competences">Compétences</Button>
+            <Button color="inherit" href="#projets">Projets</Button>
+            <Button color="inherit" href="#parcours">Parcours</Button>
+            <Button color="inherit" href="#contact">Contact</Button> 
             </div>
           </Toolbar>
         </AppBar>
@@ -110,7 +126,7 @@ function App() {
                       className='word-spacing'
                       style={{ marginRight: '5px', display: 'inline-block' }}
                     >
-                      <Typography variant="h2">{word}</Typography>
+                      <Typography variant="h3">{word}</Typography>
                     </motion.span>
                   ))}
                 </motion.div>
@@ -136,7 +152,7 @@ function App() {
                       className='word-spacing'
                       style={{ marginRight: '5px', display: 'inline-block' }}
                     >
-                      <Typography variant="h2">{word}</Typography>
+                      <Typography variant="h3">{word}</Typography>
                     </motion.span>
                   ))}
                 </motion.div>
@@ -189,8 +205,6 @@ function App() {
     
 
 
-      
-
       <Container id="competences" maxWidth="lg" className="container-margin-large">
         <Skills />
       </Container>
@@ -199,16 +213,17 @@ function App() {
         <Projects /> 
       </Container>
 
-      <Container id="parcours" maxWidth="lg" className="container-margin-large">
+      <Container id="parcours" maxWidth="lg" className="parcours-section container-margin-large">
         <Typography variant="h4" gutterBottom>
           Mon parcours
         </Typography>
         <Typography component="p">
-          Après avoir longtemps travaillé dans l'ADV, j'ai décidé de me reconvertir dans un métier-passion, le développement informatique. J'ai profité d'un break dans ma carrière pour m'initier au code, et j'ai trouvé cela passionnant. Voilà pourquoi je me suis inscrite à une formation de Développeur Web chez Open Classrooms. Je suis consciente d'être assez novice même après cette formation, mais je suis très motivée, j'aime apprendre et j'apprends vite. Ce que je cherche, c'est la pratique avant tout, en contrat court ou long, y compris en alternance afin d'approfondir mes connaissances.
+          Après avoir longtemps travaillé dans l'ADV, j'ai décidé de me reconvertir dans un métier-passion, le développement informatique. J'ai profité d'un break dans ma carrière pour m'initier au code, et j'ai trouvé cela passionnant. J'ai donc suivi la formation de Développeur Web chez Open Classrooms pour l'obtention de la certification *Développeur Informatique - code NSF 326, 326t - Diplôme de niveau 5" du RNCP. Je suis consciente d'être encore assez novice, mais je suis très motivée, j'aime apprendre et j'apprends vite. Je recherche la pratique avant tout, en contrat court ou long, y compris en alternance afin d'approfondir mes connaissances.
         </Typography>
       </Container>
-
-      <ContactForm /> 
+       <Container id="contact" maxWidth="lg" className="container-margin-large">
+         <ContactForm /> 
+      </Container>
       </div>
   );
 }

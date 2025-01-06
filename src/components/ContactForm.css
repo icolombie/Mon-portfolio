@@ -6,8 +6,19 @@
   .form-container {
     display: flex;
     flex-direction: column;
+    
+  }
+
+  .contact-form {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
   }
   
+  .textfield {
+    background: white;
+    border-radius: 5px;
+    border: solid 2px white;
+  }
   .box-margin {
     margin-top: 2rem;
   }

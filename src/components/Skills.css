@@ -1,6 +1,10 @@
 .skills-container {
     text-align: center;
     margin-top: 4rem;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(to right, #3507dc, #9198e5);
   }
   
   .skills-list {
@@ -9,6 +13,7 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 1rem;
+    margin-top: 20px;
   }
   
   .skill-item {

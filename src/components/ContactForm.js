@@ -42,12 +42,12 @@ const ContactForm = () => {
   };
 
   return (
-    <Container id="contact" maxWidth="lg" className="container-margin-large">
+    <Container id="contact" maxWidth="lg" className="container-margin-large contact-form">
       <Typography variant="h4" gutterBottom>
         Contact
       </Typography>
       <Box component="form" className="form-container" onSubmit={handleSubmit}>
-        <TextField 
+        <TextField className='textfield'
           label="Nom" 
           fullWidth 
           margin="normal" 
@@ -56,7 +56,7 @@ const ContactForm = () => {
           error={!!errors.name}
           helperText={errors.name}
         />
-        <TextField 
+        <TextField className='textfield'
           label="Email" 
           fullWidth 
           margin="normal" 
@@ -65,7 +65,7 @@ const ContactForm = () => {
           error={!!errors.email}
           helperText={errors.email}
         />
-        <TextField 
+        <TextField className='textfield'
           label="Message" 
           fullWidth 
           multiline 
