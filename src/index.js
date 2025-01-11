@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { createRoot } from 'react-dom/client';
 import { AppBar, Toolbar, Typography, Button, Container, Box } from '@mui/material';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useTheme, useMediaQuery } from '@mui/material';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import ContactForm from './components/ContactForm';
@@ -10,6 +11,8 @@ import './index.css';
 
 
 function App() {
+
+  
   const [startAnimation, setStartAnimation] = useState(false);
   const [hideWelcome, setHideWelcome] = useState(false);
   const [showIntro1, setShowIntro1] = useState(false);
@@ -22,10 +25,12 @@ function App() {
   const wordsIntro1 = introText1.split(" ");
   const wordsIntro2 = introText2.split(" ");
   
+  const theme = useTheme(); 
+  const isMobile = useMediaQuery(theme.breakpoints.down('xs'));
 
   useEffect(() => {
     const timer0 = setTimeout(() => {
-      setStartAnimation(true); }, 50); // Délai de démarrage pour l'animation de bienvenue
+      setStartAnimation(true); }, 150); // Délai de démarrage pour l'animation de bienvenue
 
     const timer1 = setTimeout(() => {
       setHideWelcome(true);
@@ -126,14 +131,14 @@ function App() {
                       className='word-spacing'
                       style={{ marginRight: '5px', display: 'inline-block' }}
                     >
-                      <Typography variant="h3">{word}</Typography>
+                      <Typography variant={isMobile ? 'h6' : 'h3'} sx={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.9)'}}>{word}</Typography>
                     </motion.span>
                   ))}
                 </motion.div>
               )}
             </AnimatePresence>
           </div>
-          <div style={{ marginTop: '20px' }}>
+          <div className='animated-title' style={{ marginTop: '20px' }}>
             <AnimatePresence>
               {showIntro1 && (
                 <motion.div
@@ -152,7 +157,7 @@ function App() {
                       className='word-spacing'
                       style={{ marginRight: '5px', display: 'inline-block' }}
                     >
-                      <Typography variant="h3">{word}</Typography>
+                      <Typography variant={isMobile ? 'h6' : 'h3'} sx={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.9)'}}>{word}</Typography>
                     </motion.span>
                   ))}
                 </motion.div>
@@ -178,7 +183,7 @@ function App() {
                       className='word-spacing'
                       style={{ marginRight: '5px', display: 'inline-block' }}
                     >
-                      <Typography variant="h3">{word}</Typography>
+                      <Typography variant={isMobile ? 'h6' : 'h3'} sx={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.9)'}}>{word}</Typography>
                     </motion.span>
                   ))}
                 </motion.div>
@@ -193,7 +198,7 @@ function App() {
                   animate="visible"
                   variants={wordVariants}
                 >
-                  <Button variant="contained" color="primary" size="large">
+                  <Button variant="contained" color="primary" size="large" href="#contact">
                     Contactez-moi
                   </Button>
                 </motion.div>
@@ -218,7 +223,7 @@ function App() {
           Mon parcours
         </Typography>
         <Typography component="p">
-          Après avoir longtemps travaillé dans l'ADV, j'ai décidé de me reconvertir dans un métier-passion, le développement informatique. J'ai profité d'un break dans ma carrière pour m'initier au code, et j'ai trouvé cela passionnant. J'ai donc suivi la formation de Développeur Web chez Open Classrooms pour l'obtention de la certification *Développeur Informatique - code NSF 326, 326t - Diplôme de niveau 5" du RNCP. Je suis consciente d'être encore assez novice, mais je suis très motivée, j'aime apprendre et j'apprends vite. Je recherche la pratique avant tout, en contrat court ou long, y compris en alternance afin d'approfondir mes connaissances.
+          En reconversion dans le Développement Web après avoir travaillé dans le commercial et l'Administration des Ventes, j'ai terminé le parcours Développement Web d'OPEN CLASSROOMS pour l'obtention de la certification Développeur Informatique - code NSF 326, 326t - Diplôme de niveau 5 du RNCP. Je suis consciente d'être encore assez novice, mais je suis très motivée, j'aime apprendre et j'apprends vite. Je recherche un poste en entreprise, en contrat court ou long, y compris en alternance afin d'approfondir mes connaissances.
         </Typography>
       </Container>
        <Container id="contact" maxWidth="lg" className="container-margin-large">

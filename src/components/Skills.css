@@ -37,6 +37,11 @@
     position: relative;
     top: -5px; /* pour chevaucher légèrement la ligne des compétences */
   }
+
+  button.skills-button {
+    border-radius: 50%;
+    padding: 8px;
+  }
   
   .skills-modal {
     display: flex;

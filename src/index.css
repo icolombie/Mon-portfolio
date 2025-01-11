@@ -3,7 +3,6 @@
 /* Styles généraux */
 body {
     font-family: 'Roboto', sans-serif;
-    /*background: linear-gradient(to right, #3507dc, #9198e5);*/
     background-color:cornflowerblue;
   }
   
@@ -100,6 +99,7 @@ body {
     left: 0; 
     z-index: -1;
     border-radius: 20px;
+    
    }
 
   
@@ -122,5 +122,15 @@ body {
   
   .form-container {
     text-align: center;
+  }
+
+  @media only screen and (max-width: 768px) { 
+    .custom-app-bar .MuiButtonBase-root { 
+      font-size: 12px; 
+    } 
+    .welcome {
+      display: none;
+    }
+    
   }
   
