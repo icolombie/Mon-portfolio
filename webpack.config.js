@@ -15,11 +15,9 @@ module.exports = {
         exclude: /node_modules/,
         use: 'babel-loader'
       },
-      { test: /\.pug$/, 
-        use: ['pug-loader'] }, 
       {
         test: /\.css$/, 
-        use: ['style-loader', 'css-loader', 'stylus-loader']
+        use: ['style-loader', 'css-loader']
       },
       {
         test: /\.(png|jpe?g|gif|svg|avif|webp)$/, 
@@ -28,6 +26,18 @@ module.exports = {
             loader: 'file-loader',
             options: {
               name: '[path][name].[ext]',
+            },
+          },
+        ],
+      },
+      {
+        test: /\.pdf$/, // Ajout de cette règle pour les fichiers PDF
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'assets/pdf/', // Où stocker les fichiers PDF dans le dossier de sortie
             },
           },
         ],

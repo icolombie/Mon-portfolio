@@ -1,26 +1,26 @@
 [
     {
       "name": "Créer une page web dynamique avec Javascript",
-      "images": ["project1.jpg", "project1.6.jpg", "project1.2.jpg", "project1.3.jpg", "project1.4.jpg", "project1.5.jpg"],
+      "images": ["project1.jpg", "project1-6.jpg", "project1-2.jpg", "project1-3.jpg", "project1-4.jpg", "project1-5.jpg"],
       "description": "Site Architecte Sophie Bluel",
       "technologies": ["HTML", "CSS", "JavaScript"],
-      "features": ["Récupération dynamique des travaux et des éléments utilisateurs via l'API", "Manipulation des éléments du DOM avec JS", "Gestion des évènements utilisateurs avec JS"],
+      "features": ["Récupération dynamique des travaux et des éléments utilisateurs via l'API : utiliser une API pour récupérer des éléments dans le serveur.", "Manipulation des éléments du DOM avec JS : générer du HTML avec JS, gérer différents modes d'affichage pour une même page, trier dynamiquement des éléments.", "Gestion des évènements utilisateurs avec JS : sécuriser un formulaire, gérer les connexions utilisateurs avec un token."],
       "githubLink": "https://github.com/icolombie/Portfolio-architecte-sophie-bluel.git"
     },
     {
       "name": "Créer une application web de location immobilière avec React",
-      "images": ["project2.jpg", "project2.1.jpg", "project2.2.jpg", "project2.3.jpg", "project2.4.jpg"],
+      "images": ["project2.jpg", "project2-1.jpg", "project2-2.jpg", "project2-3.jpg", "project2-4.jpg"],
       "description": "Site Kasa Location Immobilière",
       "technologies": ["React components", "React Router", "Sass"],
-      "features": ["Configuration de la navigation entre les pages de l'application avec React Router", "Développement des éléments de l'interface du site", "Initialisation de l'application avec CRA"],
+      "features": ["Configuration de la navigation entre les pages de l'application avec React Router : gérer le routage entres les pages d'une application React.", "Développement des éléments de l'interface du site : créer des composants React réutilisables.", "Utilisation de Sass pour le CSS : créer un CSS aisément maintenable et modifiable."],
       "githubLink": "https://github.com/icolombie/kasa.git"
     },
     {
       "name": "Développer le backend d'un site de notation de livres",
-      "images": ["project3.jpg", "project3.1.jpg", "project3.2.jpg", "project3.3.jpg", "project3.4.jpg"],
+      "images": ["project3.jpg", "project3-1.jpg", "project3-2.jpg", "project3-3.jpg", "project3-4.jpg"],
       "description": "Site Mon Vieux Grimoire",
       "technologies": ["NodeJS/Express", "MongoDB", "JWT"],
-      "features": ["Implémentation d'un modèle logique de données", "Mise en oeuvre des opérations CRUD de manière sécurisée", "Stockage des données de manière sécurisée"],
+      "features": ["Implémentation d'un backend avec NodeJS//Express : mettre en place un serveur Node avec Express et le connecter à une base de données Mongodb avec Mongoose.", "Mise en oeuvre des opérations CRUD de manière sécurisée : mettre en place les middlewares, controllers et routes de l'API.", "Stockage des données de manière sécurisée : créer des schémas de données  sécurisés avec Mongoose et Mongoose Unique Validator."],
       "githubLink": "https://github.com/icolombie/P7-Dev-Web-livres.git"
     }
   ]

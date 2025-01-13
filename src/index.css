@@ -3,7 +3,6 @@
 /* Styles généraux */
 body {
     font-family: 'Roboto', sans-serif;
-    /*background: linear-gradient(to right, #3507dc, #9198e5);*/
     background-color:cornflowerblue;
   }
   
@@ -16,6 +15,7 @@ body {
     left: 0; 
     width: 100%;
     z-index: 1100;
+    margin-bottom: 10px;
   }
 
   .custom-app-bar .MuiButtonBase-root:hover {
@@ -25,23 +25,24 @@ body {
 
   
   .custom-app-bar .MuiToolbar-root { 
-    color: #5b5bc9; /* Texte bleu */
+    color: #5b5bc9; 
     
   } 
   
   .custom-app-bar .MuiButtonBase-root { 
-    color: #5b5bc9; /* Couleur des boutons */ 
+    color: #5b5bc9; 
   } 
   
   .custom-app-bar .MuiTypography-root { 
-    color: #5b5bc9; /* Couleur du texte du titre */ 
+    color: #5b5bc9; 
   }
   
   .toolbar {
     justify-content: space-between;
   }
 
-  .welcome {
+  
+  .my-portfolio {
     display: flex;
     flex-grow: 1;
     justify-content: flex-start;
@@ -74,6 +75,7 @@ body {
   
   .box-margin {
     margin-top: 2rem;
+    text-align: center;
   }
   
   .background-container { 
@@ -90,7 +92,10 @@ body {
   } 
 
   .word-spacing {
+    display: inline-block;
+    margin-right: 5px;
     word-spacing: 20px;
+
   }
    .background-image { 
     width: 100%;
@@ -100,9 +105,23 @@ body {
     left: 0; 
     z-index: -1;
     border-radius: 20px;
+    
    }
 
+   .animation-text {
+    text-align: center;
+    margin-top: 20px;
+   }
   
+   .hidden { 
+    visibility: hidden; 
+  } 
+  .visible { 
+    visibility: visible;
+  }
+  .custom-typography {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+  }
   .projects-section {
     margin-bottom: 6rem; 
   }
@@ -119,8 +138,38 @@ body {
     padding: 20px;
     background: linear-gradient(to left, #3507dc, #9198e5);
   }
-  
+  .parcours-section.container-margin-large {
+    max-width: 1150px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .icon-container { 
+    display: flex; 
+    justify-content: center; 
+    margin-top: 16px; 
+  }
+  .icon-container a .MuiSvgIcon-root {
+     color: white; /* Met les icônes en blanc */ 
+  }
+  .icon-container a { 
+    color:#ffffff; 
+    margin: 0 8px; /* Espacement entre les icônes */ 
+    text-decoration: none; /* Enlève la décoration de lien */ 
+  } 
+  .icon-container a:hover { 
+    color: #0073b1; /* Change la couleur au survol (LinkedIn bleu) */
+  }
   .form-container {
     text-align: center;
+  }
+
+  @media only screen and (max-width: 768px) { 
+    .custom-app-bar .MuiButtonBase-root { 
+      font-size: 12px; 
+    } 
+    .welcome {
+      display: none;
+    }
+    
   }
   
