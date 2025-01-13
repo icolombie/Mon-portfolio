@@ -1,17 +1,18 @@
 import React, { useState } from 'react';
 import { Box, Button, Container, Typography, Modal, Tooltip, IconButton } from '@mui/material';
-import DescriptionIcon from '@mui/icons-material/Description';
+import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium'; 
+//import DescriptionIcon from '@mui/icons-material/Description';
 import CloseIcon from '@mui/icons-material/Close';
 import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch';
-import htmlLogo from '../assets/images/html-logo.png'; 
-import cssLogo from '../assets/images/css-logo.png';
-import jsLogo from '../assets/images/js-logo.png'; 
-import reactLogo from '../assets/images/react-logo.png'; 
-import sassLogo from '../assets/images/sass-logo.png'; 
-import nodejsLogo from '../assets/images/nodejs-logo.png'; 
-import expressLogo from '../assets/images/express-logo.png'; 
-import mongodbLogo from '../assets/images/mongodb-logo.png'; 
-import skillsMap from '../assets/images/skills-map2.jpg'; 
+import htmlLogo from '../assets/images/html-logo.webp'; 
+import cssLogo from '../assets/images/css-logo.webp';
+import jsLogo from '../assets/images/js-logo.webp'; 
+import reactLogo from '../assets/images/react-logo.webp'; 
+import sassLogo from '../assets/images/sass-logo.webp'; 
+import nodejsLogo from '../assets/images/nodejs-logo.webp'; 
+import expressLogo from '../assets/images/express-logo.webp'; 
+import mongodbLogo from '../assets/images/mongodb-logo.webp'; 
+import skillsMap from '../assets/images/skills-map.webp'; 
 import './Skills.css'; 
 
 const skillData = [ 
@@ -45,7 +46,7 @@ const Skills = () => {
       </Box>
       <Tooltip title="Voir la carte des compétences" arrow>
         <Button variant="contained" color="primary" className="skills-button" onClick={handleOpen}>
-          <DescriptionIcon />
+          <WorkspacePremiumIcon />
         </Button>
       </Tooltip>
       <Modal

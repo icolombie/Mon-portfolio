@@ -11,7 +11,7 @@ const importAll = (r) => {
   return images; 
 };
 
-const images = importAll(require.context('../assets/images', false, /\.(png|jpe?g|svg)$/));
+const images = importAll(require.context('../assets/images', false, /\.(png|jpe?g|svg|webp)$/));
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);

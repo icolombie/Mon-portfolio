@@ -12,7 +12,7 @@
       "images": ["project2.jpg", "project2-1.jpg", "project2-2.jpg", "project2-3.jpg", "project2-4.jpg"],
       "description": "Site Kasa Location Immobilière",
       "technologies": ["React components", "React Router", "Sass"],
-      "features": ["Configuration de la navigation entre les pages de l'application avec React Router", "Développement des éléments de l'interface du site", "Initialisation de l'application avec CRA"],
+      "features": ["Configuration de la navigation entre les pages de l'application avec React Router : gérer le routage entres les pages d'une application React.", "Développement des éléments de l'interface du site : créer des composants React réutilisables.", "Utilisation de Sass pour le CSS : créer un CSS aisément maintenable et modifiable."],
       "githubLink": "https://github.com/icolombie/kasa.git"
     },
     {
@@ -20,7 +20,7 @@
       "images": ["project3.jpg", "project3-1.jpg", "project3-2.jpg", "project3-3.jpg", "project3-4.jpg"],
       "description": "Site Mon Vieux Grimoire",
       "technologies": ["NodeJS/Express", "MongoDB", "JWT"],
-      "features": ["Implémentation d'un modèle logique de données", "Mise en oeuvre des opérations CRUD de manière sécurisée", "Stockage des données de manière sécurisée"],
+      "features": ["Implémentation d'un backend avec NodeJS//Express : mettre en place un serveur Node avec Express et le connecter à une base de données Mongodb avec Mongoose.", "Mise en oeuvre des opérations CRUD de manière sécurisée : mettre en place les middlewares, controllers et routes de l'API.", "Stockage des données de manière sécurisée : créer des schémas de données  sécurisés avec Mongoose et Mongoose Unique Validator."],
       "githubLink": "https://github.com/icolombie/P7-Dev-Web-livres.git"
     }
   ]
