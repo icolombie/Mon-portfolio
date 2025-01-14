@@ -2,7 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -31,13 +31,13 @@ module.exports = {
         ],
       },
       {
-        test: /\.pdf$/, // Ajout de cette règle pour les fichiers PDF
+        test: /\.pdf$/, 
         use: [
           {
             loader: 'file-loader',
             options: {
               name: '[name].[ext]',
-              outputPath: 'assets/pdf/', // Où stocker les fichiers PDF dans le dossier de sortie
+              outputPath: 'assets/pdf/', 
             },
           },
         ],
