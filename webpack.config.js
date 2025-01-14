@@ -49,11 +49,7 @@ module.exports = {
       template: './public/index.html'
     })
   ],
-  optimization: { 
-    splitChunks: { 
-      chunks: 'all' 
-    } 
-  },
+  
   devServer: {
     static: {
       directory: path.join(__dirname, 'dist'),
