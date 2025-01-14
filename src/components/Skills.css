@@ -1,62 +1,61 @@
 .skills-container {
-    text-align: center;
-    margin-top: 4rem;
-    padding: 10px;
-    border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    background: linear-gradient(to right, #3507dc, #9198e5);
-  }
-  
-  .skills-list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-top: 20px;
-  }
-  
-  .skill-item {
-    text-align: center;
-  }
-  
-  .skill-logo {
-    width: 50px;
-    height: 50px;
-  }
-  
-  .skills-button {
-    margin-top: 2rem;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    font-size: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    top: -5px; /* pour chevaucher légèrement la ligne des compétences */
-  }
+  text-align: center;
+  margin-top: 4rem;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to right, #3507dc, #9198e5);
+}
 
-  button.skills-button {
-    border-radius: 50%;
-    padding: 8px;
-  }
-  
-  .skills-modal {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .skills-modal-content {
-    width: 90%;
-    max-height: 90%;
-    overflow: auto;
-  }
-  
-  .skills-map {
-    width: 100%;
-    height: auto;
-  }
-  
+.skills-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 20px;
+}
+
+.skill-item {
+  text-align: center;
+}
+
+.skill-logo {
+  width: 50px;
+  height: 50px;
+}
+
+.skills-button {
+  margin-top: 2rem;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: -5px; 
+}
+
+button.skills-button {
+  border-radius: 50%;
+  padding: 8px;
+}
+
+.skills-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skills-modal-content {
+  width: 90%;
+  max-height: 90%;
+  overflow: auto;
+}
+
+.skills-map {
+  width: 100%;
+  height: auto;
+}

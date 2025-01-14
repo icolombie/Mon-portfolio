@@ -1,175 +1,191 @@
 /* Styles pour index.html et index.js */
 
-/* Styles généraux */
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color:cornflowerblue;
-  }
-  
-  .app-bar.custom-app-bar {
-    background-color: #ffffff; 
-    color: #5b5bc9; 
-    box-shadow: none; 
-    position: fixed; 
-    top: 0; 
-    left: 0; 
-    width: 100%;
-    z-index: 1100;
-    margin-bottom: 10px;
-  }
+  font-family: "Roboto", sans-serif;
+  background-color: cornflowerblue;
+}
 
-  .custom-app-bar .MuiButtonBase-root:hover {
-    color:#ffffff;
-    background-color: #5b5bc9;
-  }
+.app-bar.custom-app-bar {
+  background-color: #ffffff;
+  color: #5b5bc9;
+  box-shadow: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1100;
+  margin-bottom: 10px;
+}
 
-  
-  .custom-app-bar .MuiToolbar-root { 
-    color: #5b5bc9; 
-    
-  } 
-  
-  .custom-app-bar .MuiButtonBase-root { 
-    color: #5b5bc9; 
-  } 
-  
-  .custom-app-bar .MuiTypography-root { 
-    color: #5b5bc9; 
-  }
-  
-  .toolbar {
-    justify-content: space-between;
-  }
+.custom-app-bar .MuiButtonBase-root:hover {
+  color: #ffffff;
+  background-color: #5b5bc9;
+}
 
-  
+.custom-app-bar .MuiToolbar-root {
+  color: #5b5bc9;
+}
+
+.custom-app-bar .MuiButtonBase-root {
+  color: #5b5bc9;
+}
+
+.custom-app-bar .MuiTypography-root {
+  color: #5b5bc9;
+}
+
+.toolbar {
+  justify-content: space-between;
+}
+
+.my-portfolio {
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-start;
+}
+
+.nav-menu {
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end;
+}
+
+.flex-grow-1 {
+  flex-grow: 1;
+}
+
+.container-margin {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding-top: 64px;
+}
+
+.container-margin-large {
+  margin-top: 100px;
+  margin-bottom: 4rem;
+  color: #ffffff;
+}
+
+.box-margin {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.background-container {
+  position: relative;
+  text-align: center;
+  color: #ffffff;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+}
+
+.word-spacing {
+  display: inline-block;
+  margin-right: 5px;
+  word-spacing: 20px;
+}
+.background-image {
+  width: 100%;
+  height: 50vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 20px;
+}
+
+.animation-text {
+  text-align: center;
+  margin-top: 20px;
+}
+.animated-title {
+  margin-top: 20px;
+}
+
+.hidden {
+  visibility: hidden;
+}
+.visible {
+  visibility: visible;
+}
+.custom-typography {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+}
+.projects-section {
+  margin-bottom: 6rem;
+}
+
+.project-box {
+  width: 30%;
+  margin: 1rem;
+}
+
+.parcours-section {
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  padding: 20px;
+  background: linear-gradient(to left, #3507dc, #9198e5);
+}
+.parcours-section.container-margin-large {
+  max-width: 1150px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+.icon-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+.icon-container a .MuiSvgIcon-root {
+  color: white;
+}
+.icon-container a {
+  color: #ffffff;
+  margin: 0 8px;
+  text-decoration: none;
+}
+.icon-container a:hover {
+  color: #0073b1;
+}
+.form-container {
+  text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .custom-app-bar .MuiButtonBase-root {
+    font-size: 12px;
+    text-align: center;
+    justify-content: center;
+  }
   .my-portfolio {
-    display: flex;
-    flex-grow: 1;
-    justify-content: flex-start;
+    display: none;
   }
-
-
-
   .nav-menu {
-    display: flex;
-    flex-grow: 1;
-    justify-content: flex-end;
-  }
-
-  .flex-grow-1 {
-    flex-grow: 1;
-  }
-  
-  /* Styles pour les containers */
-  .container-margin {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    padding-top: 64px;
-  }
-  
-  .container-margin-large {
-    margin-top: 100px;
-    margin-bottom: 4rem;
-    color: #ffffff;
-  }
-  
-  .box-margin {
-    margin-top: 2rem;
+    justify-content: center;
     text-align: center;
   }
-  
-  .background-container { 
-    position: relative; 
-    text-align: center; 
-    color: #ffffff;
-    height: 50vh;
-    display: flex; 
-    flex-direction: column; 
-    /*justify-content: center; /* Aligne le contenu verticalement au centre */ 
-    align-items: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 20px;
-  } 
-
-  .word-spacing {
-    display: inline-block;
-    margin-right: 5px;
-    word-spacing: 20px;
-
+  .background-image {
+    display: none;
   }
-   .background-image { 
-    width: 100%;
-    height: 50vh;
-    position: absolute;
-    top: 0; 
-    left: 0; 
-    z-index: -1;
-    border-radius: 20px;
-    
-   }
-
-   .animation-text {
-    text-align: center;
-    margin-top: 20px;
-   }
-  
-   .hidden { 
-    visibility: hidden; 
-  } 
-  .visible { 
-    visibility: visible;
+  .background-container {
+    box-shadow: none;
   }
-  .custom-typography {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+  .animation-text .hidden {
+    display: block !important;
   }
-  .projects-section {
-    margin-bottom: 6rem; 
+  .animation-text .visible {
+    display: block !important;
   }
-  
-  .project-box {
-    width: 30%;
-    margin: 1rem;
+}
+@media only screen and (max-width: 450px) {
+  .animated-title {
+    margin-top: 5px;
+    margin-bottom: 5px;
   }
-
-  .parcours-section {
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 20px;
-    padding: 20px;
-    background: linear-gradient(to left, #3507dc, #9198e5);
-  }
-  .parcours-section.container-margin-large {
-    max-width: 1150px;
-    padding-left: 24px;
-    padding-right: 24px;
-  }
-  .icon-container { 
-    display: flex; 
-    justify-content: center; 
-    margin-top: 16px; 
-  }
-  .icon-container a .MuiSvgIcon-root {
-     color: white; /* Met les icônes en blanc */ 
-  }
-  .icon-container a { 
-    color:#ffffff; 
-    margin: 0 8px; /* Espacement entre les icônes */ 
-    text-decoration: none; /* Enlève la décoration de lien */ 
-  } 
-  .icon-container a:hover { 
-    color: #0073b1; /* Change la couleur au survol (LinkedIn bleu) */
-  }
-  .form-container {
-    text-align: center;
-  }
-
-  @media only screen and (max-width: 768px) { 
-    .custom-app-bar .MuiButtonBase-root { 
-      font-size: 12px; 
-    } 
-    .welcome {
-      display: none;
-    }
-    
-  }
-  
+}

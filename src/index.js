@@ -19,7 +19,7 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import ContactForm from "./components/ContactForm";
 import backgroundImage from "./assets/images/background.webp";
-import cv from './assets/CV.pdf';
+import cv from "./assets/CV.pdf";
 import "./index.css";
 
 function App() {
@@ -44,8 +44,10 @@ function App() {
     }, 500);
 
     const timer1 = setTimeout(() => {
-      setHideWelcome(true);
-    }, wordsWelcome.length * 400 + 200);
+      if (window.innerWidth > 768) {
+        setHideWelcome(true);
+      }
+    }, wordsWelcome.length * 400 + 400);
 
     const timer2 = setTimeout(() => {
       setShowIntro1(true);
@@ -53,11 +55,11 @@ function App() {
 
     const timer3 = setTimeout(() => {
       setShowIntro2(true);
-    }, wordsWelcome.length * 300 + wordsIntro1.length * 400 + 600);
+    }, wordsWelcome.length * 300 + wordsIntro1.length * 400 + 400);
 
     const timer4 = setTimeout(() => {
       setShowButton(true);
-    }, wordsWelcome.length * 400 + wordsIntro1.length * 400 + wordsIntro2.length * 400 + 600);
+    }, wordsWelcome.length * 400 + wordsIntro1.length * 400 + wordsIntro2.length * 400 + 400);
 
     return () => {
       clearTimeout(timer0);
@@ -173,7 +175,7 @@ function App() {
               )}
             </AnimatePresence>
           </div>
-          <div className="animated-title" style={{ marginTop: "20px" }}>
+          <div className="animated-title">
             <AnimatePresence>
               {showIntro1 && (
                 <motion.div
@@ -190,7 +192,6 @@ function App() {
                       animate="visible"
                       variants={wordVariants}
                       className="word-spacing"
-                      style={{ marginRight: "5px", display: "inline-block" }}
                     >
                       <Typography
                         variant={isMobile ? "h6" : "h3"}
@@ -204,7 +205,7 @@ function App() {
               )}
             </AnimatePresence>
           </div>
-          <div style={{ marginTop: "20px" }}>
+          <div className="animated-title">
             <AnimatePresence>
               {showIntro2 && (
                 <motion.div
@@ -221,7 +222,6 @@ function App() {
                       animate="visible"
                       variants={wordVariants}
                       className="word-spacing"
-                      style={{ marginRight: "5px", display: "inline-block" }}
                     >
                       <Typography
                         variant={isMobile ? "h6" : "h3"}
@@ -295,17 +295,13 @@ function App() {
         </Typography>
         <div className="icon-container">
           <Tooltip title="CV">
-            <a
-              href={cv}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href={cv} target="_blank" rel="noopener noreferrer">
               <IconButton>
                 <InsertDriveFileIcon />
               </IconButton>
             </a>
           </Tooltip>
-          
+
           <Tooltip title="LinkedIn">
             <a
               href="https://www.linkedin.com/in/Isabelle-Colombie"

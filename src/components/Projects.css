@@ -8,8 +8,6 @@
 .title {
   text-align: center;
 }
-  
-
 
 .main-container {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -23,42 +21,45 @@
   gap: 2rem;
   justify-content: center;
   align-items: center;
-  width: 100%; /* S'assure que les conteneurs occupent toute la largeur du parent */
+  width: 100%;
 }
 
 .project-box {
   width: 100%;
-  max-width: 600px; /* Ajustez la largeur des cartes */
-  min-height: 700px; /* Définir une hauteur minimale */
+  max-width: 600px;
+  min-height: 700px;
 }
 
 .accordion {
-  width: 100%; /* Assure que l'accordéon prend toute la largeur disponible */
+  width: 100%;
 }
 
-.accordion-summary, .accordion-details {
+.accordion-summary,
+.accordion-details {
   width: 100%;
 }
 
 .project-image-container {
   width: 100%;
-  height: 200px; /* Définir une hauteur fixe */
-  overflow: hidden; /* Masquer les débordements */
+  height: 200px;
+  overflow: hidden;
 }
 
 .project-image {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* Ajuste l'image pour qu'elle remplisse le conteneur sans déformation */
+  object-fit: contain;
   border-radius: 5px;
 }
 
-.project-technologies, .project-features {
+.project-technologies,
+.project-features {
   margin-top: 1rem;
   font-weight: bold;
 }
 
-.project-features ul, .project-technologies ul {
+.project-features ul,
+.project-technologies ul {
   list-style-type: disc;
   padding-left: 20px;
 }
