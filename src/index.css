@@ -183,6 +183,12 @@ body {
     display: block !important;
   }
 }
+@media only screen and (max-width: 600px) { 
+  
+  h3.custom-typography { 
+    font-size: 2.5rem; /* Ajustez cette valeur selon vos besoins */
+  }
+}
 @media only screen and (max-width: 450px) {
   .animated-title {
     margin-top: 5px;
