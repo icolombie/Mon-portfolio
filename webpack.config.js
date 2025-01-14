@@ -1,12 +1,16 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   mode: 'production',
-  entry: './src/index.js',
+  entry: {
+    main: './src/index.js'
+  },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: '[name].[contenthash].js'
   },
   module: {
     rules: [
@@ -45,16 +49,23 @@ module.exports = {
     ]
   },
   plugins: [
+    new CleanWebpackPlugin(),  // Plugin pour nettoyer le répertoire de sortie
     new HtmlWebpackPlugin({
-      template: './public/index.html'
+      template: './public/index.html'  // Utilisation de votre modèle HTML
     })
   ],
-  
-  devServer: {
-    static: {
-      directory: path.join(__dirname, 'dist'),
-    },
-    compress: true,
-    port: 9000
+  optimization: {
+    minimize: true,
+    minimizer: [new TerserPlugin()],  // Plugin pour minifier le code JavaScript
+    splitChunks: {
+      chunks: 'all',
+      cacheGroups: {
+        defaultVendors: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendors',
+          chunks: 'all'
+        }
+      }
+    }
   }
 };
