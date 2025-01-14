@@ -116,6 +116,7 @@ const Projects = () => {
                       <img
                         src={images[image]?.default}
                         alt={`${image.split(".")[0]} - ${project.description}`}
+                        loading="lazy"
                         className="project-image"
                         onClick={() =>
                           handleImageClick(
