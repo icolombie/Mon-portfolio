@@ -55,7 +55,12 @@ const ContactForm = () => {
       maxWidth="lg"
       className="container-margin-large contact-form"
     >
-      <Typography variant="h4" gutterBottom>
+      <Typography
+        variant="h3"
+        gutterBottom
+        textAlign={"center"}
+        className="contact-title"
+      >
         Contact
       </Typography>
       <Box component="form" className="form-container" onSubmit={handleSubmit}>
@@ -94,7 +99,7 @@ const ContactForm = () => {
         <Box textAlign="center" className="box-margin">
           <Button
             variant="contained"
-            color="primary"
+            color="secondary"
             size="large"
             type="submit"
           >

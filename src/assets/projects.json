@@ -1,27 +1,113 @@
 [
     {
       "name": "Créer une page web dynamique avec Javascript",
-      "images": ["project1.webp", "project1-6.webp", "project1-2.webp", "project1-3.webp", "project1-4.webp", "project1-5.webp"],
-      "description": "Site Architecte Sophie Bluel",
+      "description": "Site Architecte Sophie Bluel, site vitrine dans lequel l'architecte peut ajouter ou supprimer des photos de ses réalisations dans la galerie de son site.", 
       "technologies": ["HTML", "CSS", "JavaScript"],
       "features": ["Récupération dynamique des travaux et des éléments utilisateurs via l'API : utiliser une API pour récupérer des éléments dans le serveur.", "Manipulation des éléments du DOM avec JS : générer du HTML avec JS, gérer différents modes d'affichage pour une même page, trier dynamiquement des éléments.", "Gestion des évènements utilisateurs avec JS : sécuriser un formulaire, gérer les connexions utilisateurs avec un token."],
-      "githubLink": "https://github.com/icolombie/Portfolio-architecte-sophie-bluel.git"
+      "githubLink": "https://github.com/icolombie/Portfolio-architecte-sophie-bluel.git",
+      "images": [
+        {
+          "src":"project1.webp",
+          "title":"Galerie des réalisations",
+          "comment":"Galerie qui affiche les réalisations de l'architecte. La galerie et les boutons de tri sont générés dynamiquement."
+        },
+        
+        {
+        "src":"project1-2.jpg",
+        "title":"Modale de gestion des travaux",
+        "comment":"La galerie de la modale de gestion des travaux est générée dynamiquement. Elle permet d'ajouter ou supprimer des réalisations."
+        },
+        {
+        "src":"project1-3.jpg",
+        "title":"Formulaire d'ajout de réalisation",
+        "comment":"Le formulaire permet d'ajouter pour chaque réalisation une photo, un titre et de sélectionner une catégorie."
+        },
+        {
+        "src":"project1-4.jpg",
+        "title":"Formulaire complété",
+        "comment":"Une fois que les champs sont complétés et vérifiés, le bouton de validation devient actif."
+        },
+        
+        {
+        "src":"project1-5.jpg",
+        "title":"Modale avec réalisation ajoutée",
+        "comment":"La réalisation ajoutée s'affiche automatiquement dans la galerie de la modale."
+        },
+        {
+          "src":"project1-6.webp",
+          "title":"Galerie avec réalisation ajoutée",
+          "comment":"La réalisation ajoutée s'affiche automatiquement dans la galerie du site."
+          }
+        
+      ]
     },
     {
       "name": "Créer une application web de location immobilière avec React",
-      "images": ["project2.webp", "project2-1.webp", "project2-2.webp", "project2-3.webp", "project2-4.webp"],
-      "description": "Site Kasa Location Immobilière",
+      "description": "Site Kasa Location Immobilière, site de location entre particuliers.", 
       "technologies": ["React components", "React Router", "Sass"],
       "features": ["Configuration de la navigation entre les pages de l'application avec React Router : gérer le routage entres les pages d'une application React.", "Développement des éléments de l'interface du site : créer des composants React réutilisables.", "Utilisation de Sass pour le CSS : créer un CSS aisément maintenable et modifiable."],
-      "githubLink": "https://github.com/icolombie/kasa.git"
+      "githubLink": "https://github.com/icolombie/kasa.git",
+      "images": [
+        {
+          "src":"project2.webp",
+          "title":"Galerie des appartements à louer",
+          "comment":"Galerie qui affiche les appartements proposés à la location. La galerie est générée dynamiquement."
+        },
+        {
+        "src":"project2-1.jpg",
+        "title":"Page d'un appartement à louer",
+        "comment":"La page est composée d'un carrousel présentant différentes vues de l'appartement et d'informations diverses."
+        },
+        {
+        "src":"project2-2.jpg",
+        "title":"Page avec les collapses ouverts",
+        "comment":"Les collapses permettent d'accéder à la description de l'appartement et la liste de ses équipements."
+        },
+        {
+        "src":"project2-3.jpg",
+        "title":"Page A propos du site",
+        "comment":"Les collapses affichent différentes informations sur le site."
+        },
+        {
+        "src":"project2-4.jpg",
+        "title":"Page d'erreur du site",
+        "comment":"La page d'erreur s'affiche pour toute page erronée ou inexistante."
+        }
+      ]
     },
     {
       "name": "Développer le backend d'un site de notation de livres",
-      "images": ["project3.webp", "project3-1.webp", "project3-2.webp", "project3-3.webp", "project3-4.webp"],
-      "description": "Site Mon Vieux Grimoire",
+      "description": "Site Mon Vieux Grimoire, site de notation de livres par les utilisateurs.",
       "technologies": ["NodeJS/Express", "MongoDB", "JWT"],
       "features": ["Implémentation d'un backend avec NodeJS//Express : mettre en place un serveur Node avec Express et le connecter à une base de données Mongodb avec Mongoose.", "Mise en oeuvre des opérations CRUD de manière sécurisée : mettre en place les middlewares, controllers et routes de l'API.", "Stockage des données de manière sécurisée : créer des schémas de données  sécurisés avec Mongoose et Mongoose Unique Validator."],
-      "githubLink": "https://github.com/icolombie/P7-Dev-Web-livres.git"
+      "githubLink": "https://github.com/icolombie/P7-Dev-Web-livres.git",
+      "images": [
+        {
+          "src":"project3.jpg",
+          "title":"Page d'accueil du site",
+          "comment":"La page affiche tous les livres ajoutés par les utilisateurs, qui sont stockés dans la base de données."
+        },
+        {
+        "src":"project3-1.jpg",
+        "title":"Formulaire d'ajout de livre",
+        "comment":"Tout utilisateur connecté peut ajouter un livre grâce au formulaire, et lui attribuer une note qui ne pourra plus être modifiée."
+        },
+        {
+        "src":"project3-2.jpg",
+        "title":"Page de gestion de livre",
+        "comment":"L'utilisateur connecté peut modifier un ou plusieurs éléments d'un livre qu'il a mis dans le site, ou le supprimer."
+        },
+        {
+        "src":"project3-3.jpg",
+        "title":"Page de modification d'un livre",
+        "comment":"Tous les éléments d'un livre (titre, auteur, année de publication, genre, photo) peuvent être modifiés par l'utilisateur qui a déposé le livre, à l'exception de la note attribuée."
+        },
+        {
+        "src":"project3-4.jpg",
+        "title":"Affichage des livres les mieux notés",
+        "comment":"Chaque utilisateur peut donner une note aux livres déposés par d'autres utilisateurs. Une note moyenne est calculée pour chaque livre sur la base du total des notes du livre."
+        }
+      ]
     }
   ]
   

@@ -1,5 +1,3 @@
-/* ImageModal.css */
-
 .modal-content {
   display: flex;
   align-items: center;
@@ -14,12 +12,57 @@
   max-height: 600px;
   background-color: white;
   border: 2px solid #000;
-  box-shadow: 24px;
   padding: 16px;
   outline: none;
   overflow: hidden;
 }
+.close-button {
+  bottom: 47%;
+  left: 750px;
+  z-index: 10;
+}
+.prev-button {
+  left: -30px;
+}
+.modal-image-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 50px;
+  overflow: hidden;
+  cursor: grab;
+  position: relative;
+}
 
+.modal-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transform-origin: center;
+}
+
+.next-button {
+  right: 5px;
+}
+#zoom-in-button {
+  position: absolute;
+  bottom: 10px;
+  left: 10px !important;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  z-index: 10;
+}
+
+#zoom-out-button {
+  position: absolute;
+  bottom: 10px;
+  right: 10px !important;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  z-index: 10;
+}
 @media (max-width: 600px) {
   .modal-content {
     width: 80%;
@@ -34,9 +77,10 @@
     right: 10px;
     z-index: 10;
     background-color: rgba(0, 0, 0, 0.5);
-    color: white;
+    color: black;
   }
   .modal-image-container {
+    touch-action: none;
     width: 100%;
     height: 100%;
     display: flex;
@@ -49,47 +93,6 @@
     height: 100%;
     max-width: 100%;
     max-height: 100%;
-    object-fit: cover;
+    object-fit: contain;
   }
-}
-.modal-image-container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow-y: auto;
-}
-
-.modal-image {
-  width: 100%;
-  height: auto;
-  max-height: 100%;
-  object-fit: contain;
-}
-
-.close-button {
-  position: absolute;
-  bottom: 47%;
-  left: 750px;
-  z-index: 10;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-}
-
-.prev-button,
-.next-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-}
-
-.prev-button {
-  left: 10px;
-}
-
-.next-button {
-  right: 10px;
 }

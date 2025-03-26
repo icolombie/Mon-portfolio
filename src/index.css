@@ -5,37 +5,24 @@ body {
   background-color: cornflowerblue;
 }
 
+.container-margin {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding-top: 64px;
+}
 .app-bar.custom-app-bar {
-  background-color: #ffffff;
-  color: #5b5bc9;
-  box-shadow: none;
+  background-color: #f5f8f9;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1100;
-  margin-bottom: 10px;
-}
-
-.custom-app-bar .MuiButtonBase-root:hover {
-  color: #ffffff;
-  background-color: #5b5bc9;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .custom-app-bar .MuiToolbar-root {
   color: #5b5bc9;
-}
-
-.custom-app-bar .MuiButtonBase-root {
-  color: #5b5bc9;
-}
-
-.custom-app-bar .MuiTypography-root {
-  color: #5b5bc9;
-}
-
-.toolbar {
-  justify-content: space-between;
 }
 
 .my-portfolio {
@@ -50,25 +37,9 @@ body {
   justify-content: flex-end;
 }
 
-.flex-grow-1 {
-  flex-grow: 1;
-}
-
-.container-margin {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  padding-top: 64px;
-}
-
-.container-margin-large {
-  margin-top: 100px;
-  margin-bottom: 4rem;
+.custom-app-bar .MuiButtonBase-root:hover {
   color: #ffffff;
-}
-
-.box-margin {
-  margin-top: 2rem;
-  text-align: center;
+  background-color: #5b5bc9;
 }
 
 .background-container {
@@ -78,90 +49,128 @@ body {
   height: 50vh;
   display: flex;
   flex-direction: column;
-
   align-items: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
-}
-
-.word-spacing {
-  display: inline-block;
-  margin-right: 5px;
-  word-spacing: 20px;
 }
 .background-image {
   width: 100%;
   height: 50vh;
   position: absolute;
   top: 0;
-  left: 0;
+  left: auto;
   z-index: -1;
   border-radius: 20px;
+  border: ridge 4px white;
 }
-
 .animation-text {
   text-align: center;
   margin-top: 20px;
 }
-.animated-title {
-  margin-top: 20px;
-}
-
 .hidden {
   visibility: hidden;
 }
 .visible {
   visibility: visible;
+  margin-top: 20px;
+}
+.word-spacing {
+  display: inline-block;
+  margin-right: 5px;
+  word-spacing: 20px;
+}
+
+.animated-title {
+  margin-top: 20px;
 }
 .custom-typography {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
 }
-.projects-section {
-  margin-bottom: 6rem;
+.box-margin {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+#contact-button {
+  font-size: 20px;
+}
+
+.contact-button {
+  background: linear-gradient(
+    90deg,
+    #ffffff 0%,
+    #c9d1d6 39%,
+    #aaacae 50%,
+    #c9d1d6 61%,
+    #ffffff 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: move 2s ease infinite;
+}
+
+@keyframes move {
+  0% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: -100% 0%;
+  }
+}
+.container-margin-large {
+  color: #ffffff;
 }
 
 .project-box {
   width: 30%;
   margin: 1rem;
 }
-
+.parcours-section.container-margin-large {
+  max-width: 1150px;
+}
 .parcours-section {
-  text-align: center;
+  text-align: left;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
   padding: 20px;
   background: linear-gradient(to left, #3507dc, #9198e5);
+  border: ridge 4px white;
 }
-.parcours-section.container-margin-large {
-  max-width: 1150px;
-  padding-left: 24px;
-  padding-right: 24px;
+.parcours {
+  text-align: center;
+  text-shadow: 0 0 20px #00fffc, 2px 3px 3px #141414, 0 0 100px #00d4d1;
+  color: #ffffff;
+}
+.parcours-section p {
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .icon-container {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-top: 16px;
-}
-.icon-container a .MuiSvgIcon-root {
-  color: white;
+  gap: 10px;
 }
 .icon-container a {
   color: #ffffff;
   margin: 0 8px;
-  text-decoration: none;
 }
-.icon-container a:hover {
-  color: #0073b1;
+#cv-button {
+  color: #8461d7;
+  background-color: #ffffff;
+  font-size: 12px;
+  font-weight: 900;
+  padding: 3px;
 }
-.form-container {
-  text-align: center;
+.icon-container a .MuiSvgIcon-root {
+  color: white;
 }
 
 @media only screen and (max-width: 768px) {
-  .custom-app-bar .MuiButtonBase-root {
-    font-size: 12px;
-    text-align: center;
-    justify-content: center;
+  .container-margin {
+    margin-bottom: 1rem;
   }
   .my-portfolio {
     display: none;
@@ -170,28 +179,59 @@ body {
     justify-content: center;
     text-align: center;
   }
-  .background-image {
-    display: none;
+  .custom-app-bar .MuiButtonBase-root {
+    font-size: 12px;
+    text-align: center;
+    justify-content: center;
   }
   .background-container {
-    box-shadow: none;
+    margin-bottom: 2.5rem;
   }
-  .animation-text .hidden {
-    display: block !important;
+  h3.MuiTypography-root {
+    font-size: 2rem;
   }
-  .animation-text .visible {
-    display: block !important;
+  .box-margin {
+    margin-top: 1rem;
+  }
+  #competences {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  #projets {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 14px;
+  }
+  .container-margin-large {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .parcours-section.container-margin-large {
+    max-width: 93%;
+  }
+  #parcours {
+    margin-top: 0;
+    margin-bottom: 2rem;
+  }
+  #contact {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
   }
 }
-@media only screen and (max-width: 600px) { 
-  
-  h3.custom-typography { 
-    font-size: 2.5rem; /* Ajustez cette valeur selon vos besoins */
+@media only screen and (max-width: 600px) {
+  .container-margin {
+    margin-top: 1rem;
   }
 }
 @media only screen and (max-width: 450px) {
   .animated-title {
     margin-top: 5px;
     margin-bottom: 5px;
+  }
+  .custom-app-bar .MuiButtonBase-root {
+    font-size: 10px;
+    text-align: center;
+    justify-content: center;
   }
 }

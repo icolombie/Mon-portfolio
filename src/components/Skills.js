@@ -8,7 +8,6 @@ import {
   Tooltip,
   IconButton,
 } from "@mui/material";
-import WorkspacePremiumIcon from "@mui/icons-material/WorkspacePremium";
 import CloseIcon from "@mui/icons-material/Close";
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 import htmlLogo from "../assets/images/html-logo.webp";
@@ -28,8 +27,8 @@ const skillData = [
   { name: "JavaScript", logo: jsLogo },
   { name: "React", logo: reactLogo },
   { name: "Sass", logo: sassLogo },
-  { name: "Node.js", logo: nodejsLogo },
-  { name: "Express", logo: expressLogo },
+  { name: "NodeJs", logo: nodejsLogo },
+  { name: "ExpressJs", logo: expressLogo },
   { name: "MongoDB", logo: mongodbLogo },
 ];
 
@@ -40,7 +39,7 @@ const Skills = () => {
 
   return (
     <Container className="skills-container">
-      <Typography variant="h4" gutterBottom align="center">
+      <Typography variant="h3" gutterBottom align="center" className="skills">
         Mes Compétences
       </Typography>
       <Box className="skills-list">
@@ -58,11 +57,11 @@ const Skills = () => {
       <Tooltip title="Voir la carte des compétences" arrow>
         <Button
           variant="contained"
-          color="primary"
+          color="secondary"
           className="skills-button"
           onClick={handleOpen}
         >
-          <WorkspacePremiumIcon />
+          Carte des compétences
         </Button>
       </Tooltip>
       <Modal

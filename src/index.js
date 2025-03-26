@@ -12,13 +12,12 @@ import {
 import IconButton from "@mui/material/IconButton";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import InsertDriveFileIcon from "@mui/icons-material/InsertDriveFile";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTheme, useMediaQuery } from "@mui/material";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import ContactForm from "./components/ContactForm";
-import backgroundImage from "./assets/images/background.webp";
+import backgroundImage from "./assets/images/21.webp";
 import cv from "./assets/CV.pdf";
 import "./index.css";
 
@@ -111,11 +110,11 @@ function App() {
 
   return (
     <div>
-      <Container maxWidth="lg" className="container-margin">
+      <Container id="navbar" maxWidth="lg" className="container-margin">
         <AppBar position="static" className="app-bar custom-app-bar">
           <Toolbar>
             <Typography className="my-portfolio" variant="h6">
-              Mon Portfolio
+              Développeuse Web à Montauban (82)
             </Typography>
             <div className="nav-menu">
               <Button color="inherit" href="#accueil">
@@ -244,6 +243,8 @@ function App() {
                   variants={wordVariants}
                 >
                   <Button
+                    className="contact-button"
+                    id="contact-button"
                     variant="contained"
                     color="primary"
                     size="large"
@@ -279,26 +280,33 @@ function App() {
         maxWidth="lg"
         className="parcours-section container-margin-large"
       >
-        <Typography variant="h4" gutterBottom>
+        <Typography
+          variant={isMobile ? "h6" : "h3"}
+          gutterBottom
+          className="parcours"
+        >
           Mon parcours
         </Typography>
         <Typography component="p">
-          En reconversion dans le Développement Web après avoir travaillé dans
-          le commercial et l'Administration des Ventes, j'ai terminé le parcours
-          Développement Web d'OPEN CLASSROOMS pour l'obtention de la
-          certification Développeur Informatique - code NSF 326, 326t - Diplôme
-          de niveau 5 du RNCP. Je souhaiterais apporter mes compétences à votre
-          entreprise en contrat court ou long, ou en approfondissant mes
-          connaissances avec une alternance. Rigoureuse et organisée, j’aime
-          travailler en équipe et m’impliquer dans les projets. Je suis
-          autonome, fiable et très motivée.
+          Après une carrière enrichissante dans le domaine commercial et
+          l'Administration des Ventes, j'ai choisi de me reconvertir dans le
+          Développement Web pour allier créativité et technique. J'ai suivi avec
+          succès le parcours Développement Web chez OpenClassrooms, obtenant la
+          certification Développeur Informatique (code NSF 326, 326t), un
+          diplôme reconnu de niveau 5 au RNCP.
+          <br />
+          Passionnée par le front-end pour ses aspects esthétiques et
+          interactifs, je possède également des compétences en back-end, me
+          permettant d’avoir une vision globale des projets web. Rigoureuse et
+          organisée, j'apprécie particulièrement le travail en équipe, où je
+          peux m’investir pleinement pour atteindre des objectifs communs.
+          Autonome, fiable et profondément motivée, je suis prête à relever de
+          nouveaux défis dans ce domaine en constante évolution.
         </Typography>
         <div className="icon-container">
           <Tooltip title="CV">
             <a href={cv} target="_blank" rel="noopener noreferrer">
-              <IconButton>
-                <InsertDriveFileIcon />
-              </IconButton>
+              <IconButton id="cv-button">CV</IconButton>
             </a>
           </Tooltip>
 
