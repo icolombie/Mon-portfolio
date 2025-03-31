@@ -68,7 +68,7 @@ li {
   background-color: aliceblue;
   color: #3507dc;
 }
-.project-images-container {
+#project-images-container {
   padding-left: 8px;
   padding-right: 8px;
   padding-top: 16px;
@@ -77,8 +77,8 @@ li {
   background-color: #471edc;
   border-radius: 20px;
   box-shadow: 0 4px 8px rgba(42, 2, 88, 0.2);
+  gap: 10px;
 }
-
 .project-image-container {
   text-align: center;
   margin-bottom: 16px;

@@ -135,6 +135,7 @@ const Projects = () => {
                   alignItems="flex-start"
                   gap={2}
                   marginTop={2}
+                  id="project-images-container"
                   className="project-images-container"
                 >
                   {project.images.map((imageObj, index) => (
